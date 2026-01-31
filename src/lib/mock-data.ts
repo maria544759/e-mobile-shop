@@ -1,0 +1,85 @@
+import type { Product, User } from './types';
+
+export const MOCK_USERS: User[] = [
+    {
+        $id: 'user-maria',
+        name: 'Maria',
+        email: 'maria@example.com',
+        role: 'seller',
+    },
+    {
+        $id: 'user-musab',
+        name: 'Musab',
+        email: 'musab@example.com',
+        role: 'seller',
+    },
+    {
+        $id: 'user-ismail',
+        name: 'Ismail',
+        email: 'ismail@example.com',
+        role: 'customer',
+    },
+];
+
+export const MOCK_PRODUCTS: Product[] = [
+    {
+        $id: 'prod-1',
+        name: 'Ergonomic Wireless Mouse',
+        description: 'A precision mouse for professionals.',
+        price: 49.99,
+        category: 'Electronics',
+        images: ['https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=600&auto=format&fit=crop&q=60'],
+        sellerId: 'user-maria',
+        stock: 50,
+        $createdAt: new Date().toISOString(),
+        $updatedAt: new Date().toISOString(),
+    },
+    {
+        $id: 'prod-2',
+        name: 'Mechanical Keyboard',
+        description: 'Clicky blue switches with RGB backlighting.',
+        price: 89.99,
+        category: 'Electronics',
+        images: ['https://images.unsplash.com/photo-1587829741301-dc798b91a603?w=600&auto=format&fit=crop&q=60'],
+        sellerId: 'user-maria',
+        stock: 20,
+        $createdAt: new Date().toISOString(),
+        $updatedAt: new Date().toISOString(),
+    },
+    {
+        $id: 'prod-3',
+        name: 'Minimalist Desk Lamp',
+        description: 'Warm LED light for your workspace.',
+        price: 35.00,
+        category: 'Home',
+        images: ['https://images.unsplash.com/photo-1507473888900-52e1ad1d6904?w=600&auto=format&fit=crop&q=60'],
+        sellerId: 'user-musab',
+        stock: 15,
+        $createdAt: new Date().toISOString(),
+        $updatedAt: new Date().toISOString(),
+    },
+    {
+        $id: 'prod-4',
+        name: 'Noise Cancelling Headphones',
+        description: 'Immersive sound with active noise cancellation.',
+        price: 199.99,
+        category: 'Electronics',
+        images: ['https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=60'],
+        sellerId: 'user-musab',
+        stock: 10,
+        $createdAt: new Date().toISOString(),
+        $updatedAt: new Date().toISOString(),
+    },
+    {
+        $id: 'prod-5',
+        name: 'Ceramic Coffee Mug',
+        description: 'Handcrafted ceramic mug.',
+        price: 12.50,
+        category: 'Home',
+        images: ['https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=600&auto=format&fit=crop&q=60'],
+        sellerId: 'user-maria',
+        stock: 100,
+        $createdAt: new Date().toISOString(),
+        $updatedAt: new Date().toISOString(),
+    }
+];
