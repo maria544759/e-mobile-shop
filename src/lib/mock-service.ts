@@ -166,4 +166,27 @@ export class MockService implements ApiService {
             }
         });
     }
+
+    async updateOrderStatus(orderId: string, status: 'pending' | 'shipped' | 'delivered' | 'cancelled'): Promise<Order> {
+        await delay(500);
+        const order = this.orders.find(o => o.$id === orderId);
+        if (!order) throw new Error('Order not found');
+        order.status = status;
+        order.$updatedAt = new Date().toISOString();
+        return order;
+    }
+
+    async uploadFile(_file: File): Promise<string> {
+        await delay(1000);
+        return `mock-file-${Date.now()}`;
+    }
+
+    getFilePreview(fileId: string): string {
+        return `https://via.placeholder.com/300?text=Mock+Image+${fileId}`;
+    }
+
+    async deleteFile(fileId: string): Promise<void> {
+        await delay(500);
+        console.log(`Deleted mock file ${fileId}`);
+    }
 }

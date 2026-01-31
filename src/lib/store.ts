@@ -27,7 +27,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     register: async (email, password, name, role) => {
         set({ isLoading: true });
         try {
-            const user = await apiClient.register(email, password, name, role);
+            const user = await apiClient.register(email, password, name, role as any);
             set({ user, isLoading: false });
         } catch (e) {
             console.error('Registration Failed', e);

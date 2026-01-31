@@ -35,9 +35,12 @@ try {
         createOrder: async () => ({}) as any,
         getMyOrders: async () => [],
         getSellerOrders: async () => [],
+        updateOrderStatus: async () => ({}) as any,
         uploadFile: async () => 'mock_id',
         getFilePreview: () => '',
         deleteFile: async () => { },
+        register: async () => ({}) as any,
+        updateUserRole: async () => ({}) as any,
     };
 }
 

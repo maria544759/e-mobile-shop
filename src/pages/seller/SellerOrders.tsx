@@ -4,11 +4,9 @@ import { useAuthStore } from '@/lib/store';
 import { apiClient } from '@/lib/client';
 import type { Order, CartItem, OrderStatus } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { formatPrice } from '@/lib/utils';
-import { Truck, Package } from 'lucide-react';
 
 export default function SellerOrders() {
     const { user } = useAuthStore();

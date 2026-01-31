@@ -187,11 +187,11 @@ export default function Orders() {
                                                             )}
                                                         </div>
                                                         <div>
-                                                            <p className="font-medium">{item.product?.name || item.name || 'Unknown Product'}</p>
+                                                            <p className="font-medium">{item.product?.name || 'Unknown Product'}</p>
                                                             <p className="text-slate-500">Qty: {item.quantity}</p>
                                                         </div>
                                                     </div>
-                                                    <span className="font-medium">{formatPrice((item.product?.price || item.price || 0) * item.quantity)}</span>
+                                                    <span className="font-medium">{formatPrice((item.product?.price || 0) * item.quantity)}</span>
                                                 </div>
                                             ))}
                                         </div>

@@ -37,7 +37,7 @@ export default function ProductEditor() {
                 price: product.price.toString(),
                 category: product.category,
                 stock: product.stock.toString(),
-                image: product.images[0] || '',
+                image: product.imageUrls[0] || '',
             });
         }
     }, [product]);
@@ -51,7 +51,7 @@ export default function ProductEditor() {
                 price: parseFloat(form.price),
                 category: form.category,
                 stock: parseInt(form.stock),
-                images: [form.image],
+                imageUrls: [form.image],
                 sellerId: user!.$id, // In real app, backend assigns this from session
             };
 

@@ -18,7 +18,7 @@ export default function ProductDetail() {
             <div className="space-y-4">
                 <div className="aspect-square bg-slate-100 rounded-lg overflow-hidden border border-slate-200">
                     <img
-                        src={product.images[0]}
+                        src={product.imageUrls[0]}
                         alt={product.name}
                         className="object-cover w-full h-full mix-blend-multiply"
                     />
@@ -26,7 +26,7 @@ export default function ProductDetail() {
                 <div className="flex gap-4 overflow-x-auto">
                     {/* Just repeating the image for now, later multiple images */}
                     <div className="w-20 h-20 bg-slate-100 rounded border border-slate-200 overflow-hidden cursor-pointer ring-2 ring-slate-900">
-                        <img src={product.images[0]} className="object-cover w-full h-full mix-blend-multiply" />
+                        <img src={product.imageUrls[0]} className="object-cover w-full h-full mix-blend-multiply" />
                     </div>
                 </div>
             </div>

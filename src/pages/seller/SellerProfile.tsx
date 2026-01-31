@@ -10,7 +10,6 @@ import { Camera } from 'lucide-react';
 
 export default function SellerProfile() {
     const { user } = useAuthStore();
-    const [loading, setLoading] = useState(false);
     const [avatarPreview, setAvatarPreview] = useState<string | undefined>(user?.avatarUrl);
 
     const handleAvatarChange = async (e: React.ChangeEvent<HTMLInputElement>) => {

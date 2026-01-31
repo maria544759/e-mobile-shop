@@ -58,7 +58,7 @@ export default function Products() {
                             <Card key={product.$id} className="flex flex-col h-full hover:shadow-md transition-shadow">
                                 <Link to={`/products/${product.$id}`} className="block aspect-square relative bg-slate-100 overflow-hidden rounded-t-lg">
                                     <img
-                                        src={product.images[0]}
+                                        src={product.imageUrls[0]}
                                         alt={product.name}
                                         className="object-cover w-full h-full mix-blend-multiply hover:scale-105 transition-transform duration-300"
                                     />
