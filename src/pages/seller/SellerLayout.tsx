@@ -37,7 +37,7 @@ export default function SellerLayout() {
             {/* Sidebar */}
             <aside
                 className={cn(
-                    "fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 text-white transform transition-transform duration-200 ease-in-out lg:translate-x-0 lg:static lg:inset-0 flex flex-col h-screen sticky top-0",
+                    "fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 text-white transform transition-transform duration-200 ease-in-out lg:translate-x-0 lg:sticky lg:inset-0 flex flex-col h-screen top-0",
                     isSidebarOpen ? "translate-x-0" : "-translate-x-full"
                 )}
             >
@@ -109,6 +109,6 @@ export default function SellerLayout() {
                     </div>
                 </main>
             </div>
-        </div>
+        </div >
     );
 }
